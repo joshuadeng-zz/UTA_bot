@@ -34,9 +34,9 @@ def run_bot(reddit, replied):
             with open("replied.txt", "a") as i:
                 i.write(submission.id + "\n")
 
-    print("sleeping for 1 seconds")
-    # sleep for 1 seconds
-    time.sleep(1)
+    print("sleeping for 30 seconds")
+    # sleep for 30 seconds
+    time.sleep(30)
 
 
 def get_replied():
@@ -55,7 +55,7 @@ def retrieve_credentials():
 
 
 def main():
-    replied = set()
+    replied = get_replied()
     reddit = authenticate()
     while True:
         run_bot(reddit, replied)
