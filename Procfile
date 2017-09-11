@@ -1,1 +1,1 @@
-web: python UTA_bot.py
+worker: python UTA_bot.py
