@@ -4,6 +4,7 @@ import os
 
 REPLY_MESSAGE = "Friendly reminder: 'UTA' refers to UT Arlington. UT Austin is simply 'UT'.\n\nIf you actually meant UT Arlington then ignore this post."
 
+
 def authenticate():
     print("authenticating")
     login_info=retrieve_credentials()
@@ -33,9 +34,9 @@ def run_bot(reddit, replied):
             with open("replied.txt", "a") as i:
                 i.write(submission.id + "\n")
 
-    print("sleeping for 10 seconds")
-    # sleep for 10 seconds
-    time.sleep(10)
+    print("sleeping for 30 seconds")
+    # sleep for 30 seconds
+    time.sleep(30)
 
 
 def get_replied():
@@ -55,13 +56,11 @@ def retrieve_credentials():
 
 def main():
     replied = get_replied()
-    print(replied)
     reddit = authenticate()
     while True:
         run_bot(reddit, replied)
 
 
 # main method
-
 if __name__ == "__main__":
     main()
