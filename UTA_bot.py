@@ -19,7 +19,7 @@ def authenticate():
 def run_bot(reddit, replied):
     print("getting submissions")
 
-    for submission in reddit.subreddit('test').new(limit=5):
+    for submission in reddit.subreddit('UTAustin').new(limit=5):
         if (" uta" in submission.title or " uta" in submission.selftext 
             or " UTA" in submission.title or " UTA" in submission.selftext) and submission.id not in replied:
 
