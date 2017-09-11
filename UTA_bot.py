@@ -55,7 +55,7 @@ def retrieve_credentials():
 
 
 def main():
-    replied = get_replied()
+    replied = set()
     reddit = authenticate()
     while True:
         run_bot(reddit, replied)
