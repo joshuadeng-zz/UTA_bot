@@ -21,7 +21,7 @@ def run_bot(reddit, replied):
     print("getting submissions")
     for submission in reddit.subreddit('UTAustin').new(limit=5):
         if (" uta" in submission.title or " uta" in submission.selftext 
-            or " UTA" in submission.title or " UTA" in submission.selftextor 
+            or " UTA" in submission.title or " UTA" in submission.selftext 
             or "UTA " in submission.title) and submission.id not in replied:
 
             print("string with 'UTA' found in " + submission.id)
