@@ -31,9 +31,8 @@ def run_bot(reddit, replied):
             with open("replied.txt", "a") as i:
                 i.write(submission.id + "\n")
 
-    print("sleeping for 30 minutes")
-    # sleep for 30 minutes
-    time.sleep(1800)
+    print("sleeping for 1 hour")
+    time.sleep(3600)
 
 
 def get_replied():
