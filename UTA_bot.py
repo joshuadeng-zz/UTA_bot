@@ -19,7 +19,7 @@ def authenticate():
 
 def run_bot(reddit, replied):
     print("getting submissions")
-    for submission in reddit.subreddit('UTAustin').new(limit=5):
+    for submission in reddit.subreddit('UTAustin').new(limit=10):
         if (" uta " in submission.title.lower() or " uta " in submission.selftext.lower() 
             or " uta?" in submission.title.lower()) and submission.id not in replied:
 
@@ -31,9 +31,9 @@ def run_bot(reddit, replied):
             with open("replied.txt", "a") as i:
                 i.write(submission.id + "\n")
 
-    print("sleeping for 30 seconds")
-    # sleep for 30 seconds
-    time.sleep(30)
+    print("sleeping for 30 minutes")
+    # sleep for 30 minutes
+    time.sleep(1800)
 
 
 def get_replied():
